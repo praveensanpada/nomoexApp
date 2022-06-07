@@ -1,0 +1,69 @@
+
+A) Signup Custom-
+
+1) localhost:3002/api/v1/auth/signup
+-> Non-Authenticated 
+{
+	"email":"p12@gmail.com",
+	"phoneNumber":"7325854688",
+	"firstName":"Praveen",
+	"lastName":"Sanpada",
+	"password":"Nomoex",
+	"emailOtpKey":"535be55225c959febe1fb7fedb9ddb88a6044f1399f4c6755faa58302d55d67b.1654236365187",
+	"otp":"5965"
+}
+
+2) localhost:3002/api/v1/auth/send-email-otp
+-> Non-Authenticated 
+{
+	"email":"p12@gmail.com"
+}
+
+3) localhost:3002/api/v1/auth/send-phone-otp
+-> Authenticated 
+{
+	"phoneNumber":"7325854619"
+}
+
+4) localhost:3002/api/v1/auth/verify-phone-otp
+-> Authenticated 
+{
+	"phoneNumber":"7325854619",
+	"phoneOtpKey":"ea0d29d659110c31a3b19eed7117c6ed775da802225518576a93020f1b8554a1.1654237754065",
+	"otp":"9607"
+}
+
+
+------------------------------------------------------------------------
+B) Login Custom-
+
+1) localhost:3002/api/v1/auth/login
+-> Non-Authenticated  
+{
+	"email":"praveen1@gmail.com",
+	"password":"Nomoex"
+}
+
+2) verify-user Pending
+
+3) localhost:3002/api/v1/auth/reset
+-> Authenticated 
+{
+	"password":"Nomoex1",
+	"newPassword":"Nomoex1"
+}
+
+4) localhost:3002/api/v1/auth/forgot-password
+-> Non-Authenticated
+{
+	"email":"praveen1@gmail.com"
+}
+
+5) localhost:3002/api/v1/auth/forgot-password2
+-> Non-Authenticated
+{
+	"email":"praveen1@gmail.com",
+	"password":"Nomoex",
+	"emailOtpKey":"76cc614df1d194e2b2b8060a0aa9e42d281cd3c5d2546c3d5061f1ddd41ba0c6.1654252404728",
+	"otp":"7934"
+}
